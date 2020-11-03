@@ -8,12 +8,12 @@ select ho.hadm_id, a."SUBJECT_ID", p.gender ,
 	else
 		DATE_PART('year', a.admittime) - DATE_PART('year', p.dob)
 	end as sub_AGE,
-	last_diagnosis.icd9_code as last_icd9_code,
+	last_diagnosis.icd9_code as last_icd9_code, last_diagnosis.amount,
 	i.last_careunit, i.los 
 from hadm_overview ho
 inner join admissions a on a.hadm_id = ho.hadm_id
 inner join patients p on p.subject_id = a."SUBJECT_ID" 
-inner join (select di.hadm_id, di.icd9_code
+inner join (select di.hadm_id, di.icd9_code, max_seq.last as amount
 			from diagnoses_icd di 
 			inner join (select hadm_id , max(seq_num) as last
 						from diagnoses_icd di 
