@@ -50,7 +50,13 @@ JOIN ( SELECT di.hadm_id,
       WHERE (i.hadm_id IN ( SELECT hadm_overview.hadm_id
                FROM hadm_overview)) AND ts.first_extubation >= i.intime AND ts.first_extubation <= i.outtime) icu ON icu.hadm_id = ho.hadm_id
 -- Join the label-query
-JOIN vw_label_extubations vle ON vle.icustay_id = icu.icustay_id::numeric
+JOIN (SELECT vte.hadm_id, vte.icustay_id, vte.hour_to_reintub::numeric as dauer,
+            CASE
+                WHEN vte.hour_to_reintub IS NULL THEN 1
+                WHEN vte.hour_to_reintub > 48::double precision THEN 1
+                ELSE 0
+            END AS label
+        FROM vw_ts_extubations vte ) vle ON vle.icustay_id = icu.icustay_id::numeric
 LEFT JOIN ( SELECT d.hadm_id
        FROM drgcodes d
       WHERE d.description::text ~~ '%Tracheostomy%'::text) trach ON ho.hadm_id = trach.hadm_id
