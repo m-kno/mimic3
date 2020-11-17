@@ -3,22 +3,17 @@
  * zu bestimmen
  */
 
-CREATE OR REPLACE VIEW public.vw_labev_values
+CREATE OR REPLACE VIEW public.vw_labev_values_new
 AS (
 SELECT l.hadm_id,
     last_val.icustay_id,
-    l.itemid,
-    l.value,
     last_val.charttime,
     CASE
         WHEN l.itemid = 50821 THEN 'Pa02'::text
-        WHEN l.itemid = 50802 THEN 'base_excess'::text
         WHEN l.itemid = 50820 THEN 'pH'::text
-        WHEN l.itemid = 51222 THEN 'hb'::text
-        WHEN l.itemid = 51221 THEN 'hct'::text
-        WHEN l.itemid = 50912 THEN 'creatinin'::text
         ELSE NULL::text
     END AS item,
+    l.value,
 	last_val.hours_bevor_ext
 FROM labevents l
 -- Joining now the labevents bevor the extubation. The highest charttime is closest to the extubation
@@ -42,8 +37,8 @@ JOIN ( SELECT distinct last_events.hadm_id,
 		            min(vte.charttime) AS ext_ts
 		           FROM vw_timestamp_extubation vte
 		          GROUP BY vte.hadm_id, vte.icustay_id) min_ts ON min_ts.hadm_id = l2.hadm_id AND min_ts.ext_ts > l2.charttime
-		WHERE l2.itemid = ANY (ARRAY[50821, 50802, 50820, 51222, 51221, 50912])) last_events
-	where last_events.hours_bevor_ext <= 96
+		WHERE l2.itemid = ANY (ARRAY[50821, 50820])) last_events
+	where last_events.hours_bevor_ext <= 48
 	) last_val ON (last_val.hadm_id = l.hadm_id AND last_val.itemid = l.itemid AND last_val.charttime = l.charttime)
- ORDER BY l.hadm_id, last_val.icustay_id, l.itemid
+ ORDER BY l.hadm_id, last_val.icustay_id, l.itemid, last_val.charttime
  );
