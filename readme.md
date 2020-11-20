@@ -4,11 +4,7 @@ The authors: [Mirko Knoche](https://github.com/CrazyBigFoot), [Jacqueline Gabrie
 
 This project is still **in progress**.
 
-<p align="center">
-  <img src="https://pixabay.com/photos/emergency-medicine-3691902/" width="350">
-</p>
- 
-[Image Source:](https://pixabay.com/photos/emergency-medicine-3691902/)
+![Emergency_Pixabay](https://user-images.githubusercontent.com/67256213/99786324-a019f100-2b1e-11eb-9d97-84e3a76a71dc.png)
 
 
 ## Overview 
