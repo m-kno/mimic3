@@ -29,20 +29,27 @@ The project is intended to cover all stages of the data science cycle:
 - 7 Data visualization
 
 ## Tools and Technologies used 
-Database Management with SQL: Postgre SQL 
-Analysis with Python: Pandas / NumPy / Matplotlib / Seaborn / sklearn
- 
-## ML models used
-The models were applied and compared for *factor to measure on* 
+Database Management with SQL: PostgreSQL / DBeaver  
+Analysis with Python: Pandas / NumPy / scikit-learn / Matplotlib / Seaborn / sklearn
 
-- Model 1
-- Model 2
-- Model 3
+## ML models used
+The models were applied and compared for *F0.5-score* 
+
+- Logistic Regression
+- Decision Tree
+- Random Forest
+- XGBoost 
+- Adaboost 
+- Knn
+- Support Vector Machine
  
-## Conclusions
-- Conclusion 1 
-- Conclusion 2 
-- Conclusion 3
+## Results
+- Best performing model, focusing on F0.5 score: 
+- Most important features: 
+
+# Conclusion
+- 
+- 
 
 ## Future work
 **Title Future Work 1**
