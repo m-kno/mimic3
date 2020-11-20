@@ -1,11 +1,10 @@
 # Prediction of Extubation Success in Patients with Acute Respiratory Syndrome 
 
+![Emergency_Pixabay](https://user-images.githubusercontent.com/67256213/99786324-a019f100-2b1e-11eb-9d97-84e3a76a71dc.png)
+
 The authors: [Mirko Knoche](https://github.com/CrazyBigFoot), [Jacqueline Gabriel](https://github.com/gabriel-hd73), [Niko Stergioulas](https://github.com/stervet) and [Nina Notman](https://github.com/NinaNotman)
 
 This project is still **in progress**.
-
-![Emergency_Pixabay](https://user-images.githubusercontent.com/67256213/99786324-a019f100-2b1e-11eb-9d97-84e3a76a71dc.png)
-
 
 ## Overview 
 
@@ -29,7 +28,7 @@ The project is intended to cover all stages of the data science cycle:
 
 ## Tools and Technologies used 
 Database Management with SQL: PostgreSQL / DBeaver  
-Analysis with Python: Pandas / NumPy / scikit-learn / Matplotlib / Seaborn / sklearn
+Analysis with Python: Pandas / NumPy / scikit-learn / Matplotlib / Seaborn 
 
 ## ML models used
 The models were applied and compared for *F0.5-score* 
