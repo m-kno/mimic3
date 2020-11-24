@@ -69,5 +69,13 @@ The important  features of the best XGBoost Model:
 - age
 
 ## Future work
-- Analysis where the model makes errors
+**Further Feature Engineering**
 - Add BMI and weight change as additional features
+- Add medications and other treatments and their charttime as features
+- take fluid input and output into account
+
+**Modelling**
+- Analysis where the model makes errors
+- Neuronal networks
+- Time Series analysis
+
