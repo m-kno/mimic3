@@ -69,10 +69,5 @@ The important  features of the best XGBoost Model:
 - age
 
 ## Future work
-**Title Future Work 1**
-- To Do Future Work 1
-- To Do Future Work 1 
-
-**Title Future Work 2**
-- To Do Future Work 2
-- To Do Future Work 2 
+- Analysis where the model makes errors
+- Add BMI and weight change as additional features
