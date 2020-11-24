@@ -60,22 +60,21 @@ The models were applied and compared for *F0.5-score*
 We mainly focused on the evaluation metric F-Beta(0.5), to ensure als little false positives as possible. Feature importance is the first attempt to tackle interpretability. If there would be a higher demand on interpretability, we would rather prefer transparent classifiers, such as Decision Tree, Logistic Regression or linear SVM.
 At the end 75% of positive identification are actually correct. The accuracy of 0.75 tell us that more than 75% of all predictions are correct. Compared to the success rate from the database (Precison: 66%, Accuracy: 55%), the goal of improving the success of extubations has been achieved.
 
-The important  features of the best XGBoost Model:  
-- is the patient tracheotomized ?
+The important features of the best XGBoost Model:  
+- Is the patient tracheotomized?
 - SaO2 and PaO2 (min, median)
 - Respiratory rate
-- the ratio of arterial partial pressure of oxygen
-- maximum of the fraction of inspired oxygen
-- age
+- The ratio of arterial partial pressure of oxygen to inspired fractional concentration of oxygen
+- Maximum of the fraction of inspired oxygen
+- Age
 
 ## Future work
 **Further Feature Engineering**
 - Add BMI and weight change as additional features
-- Add medications and other treatments and their charttime as features
-- take fluid input and output into account
+- Add medications, treatments and their charttime as features
+- Take fluid input and output into account
 
 **Modelling**
-- Analysis where the model makes errors
+- Check false classified patients
 - Neuronal networks
 - Time Series analysis
-
