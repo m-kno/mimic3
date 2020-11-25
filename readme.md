@@ -43,14 +43,14 @@ The models were applied and compared for *F0.5-score*
  
 ## Content
 1. [Jupyter Notebook 1](https://github.com/CrazyBigFoot/mimic3/blob/main/01_OverviewData.ipynb) (*OverviewData*): Data Exploration and merging of tables 
-2. Jupyter Notebook 2 (*SelectingPatientGroup*): Selecting patient group and defining label (extubation outcome)
-3. Jupyter Notebook 3 (*EDA*): Data cleaning 
-4. Jupyter Notebook 4 (*DataPreparation*): Checking for correlations between the features 
-5. Jupyter Notebook 5 (*Modeling*): Train-Test-Split, Scaling, dummy classifier, base models, as well as random search, grid search and feature importance for each base model 
-6. Jupyter Notebook 6 (*FeatureEngineering*): Engineering of new features 
-7. Jupyter Notebook 7 (*AdvancedModels*): Train-Test-Split, Scaling, dummy classifier, advanced models, as well as random search, grid search and feature importance for each advanced model with added features
-8. Jupyter Notebook 8 (*DroppingTracheoColumn*): repeating the steps of notebook 7 but dropping the column "tracheo" before running the model.
-9. Jupyter Notebook 9 (*DroppingTracheoPatients*): repeating the steps of notebook 7 but dropping all patients that have been tracheomized.
+2. [Jupyter Notebook 2](https://github.com/CrazyBigFoot/mimic3/blob/main/02_SelectingPatientgroupFeaturesLabel.ipynb) (*SelectingPatientGroup*): Selecting patient group and defining label (extubation outcome)
+3. [Jupyter Notebook 3](https://github.com/CrazyBigFoot/mimic3/blob/main/03_EDA_mimic.ipynb) (*EDA*): Data cleaning 
+4. [Jupyter Notebook 4](https://github.com/CrazyBigFoot/mimic3/blob/main/04_EDA_and_Preperation_Modelling.ipynb) (*DataPreparation*): Checking for correlations between the features 
+5. [Jupyter Notebook 5](https://github.com/CrazyBigFoot/mimic3/blob/main/05_Modeling.ipynb) (*Modeling*): Train-Test-Split, Scaling, dummy classifier, base models, as well as random search, grid search and feature importance for each base model 
+6. [Jupyter Notebook 6](https://github.com/CrazyBigFoot/mimic3/blob/main/06_Feature_engineering_Advanced_model.ipynb) (*FeatureEngineering*): Engineering of new features 
+7. [Jupyter Notebook 7](https://github.com/CrazyBigFoot/mimic3/blob/main/07_Advanced_Model.ipynb) (*AdvancedModels*): Train-Test-Split, Scaling, dummy classifier, advanced models, as well as random search, grid search and feature importance for each advanced model with added features
+8. [Jupyter Notebook 8](https://github.com/CrazyBigFoot/mimic3/blob/main/08_Model-without_tracheo_column.ipynb) (*DroppingTracheoColumn*): repeating the steps of notebook 7 but dropping the column "tracheo" before running the model.
+9. [Jupyter Notebook 9](https://github.com/CrazyBigFoot/mimic3/blob/main/09_Model_without_tracheo_rows.ipynb) (*DroppingTracheoPatients*): repeating the steps of notebook 7 but dropping all patients that have been tracheomized.
 
 ## Results
 - Best performing model(s): Base Model: , Advanced Model , Reduced Model: , Balanced Model:  
