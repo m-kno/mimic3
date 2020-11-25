@@ -41,8 +41,8 @@ The models were applied and compared for *F0.5-score*
 - Knn
 - Support Vector Machine
  
-## Jupyter Notebooks
-1. Jupyter Notebook 1 (*OverviewData*): Data Exploration and merging of tables 
+## Content
+1. [Jupyter Notebook 1](https://github.com/CrazyBigFoot/mimic3/blob/main/01_OverviewData.ipynb) (*OverviewData*): Data Exploration and merging of tables 
 2. Jupyter Notebook 2 (*SelectingPatientGroup*): Selecting patient group and defining label (extubation outcome)
 3. Jupyter Notebook 3 (*EDA*): Data cleaning 
 4. Jupyter Notebook 4 (*DataPreparation*): Checking for correlations between the features 
